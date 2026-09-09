@@ -3,37 +3,37 @@
 
 ## 1. 프로젝트 수동 생성
 - 명령어 : `pnpm i next@latest react@latest react-dom@latest`
-- next dev : 개발 서버 시작
-- next buid : 프로덕션을 위한 애플리케이션 빌드
-- next start : 프로덕션 서버 시작
+- `next dev` : 개발 서버 시작
+- `next buid` : 프로덕션을 위한 애플리케이션 빌드
+- `next start` : 프로덕션 서버 시작
 - 타입스크립트 환경에서 `react`와 `react-dom`을 사용할 수 있도록 제공하는 패키지를 설치해야 함 <br>
 → `pnpm add -D @types/react @types/react-dom`
 - 서버 시작 : `pnpm dev`
 - `paths` 옵션을 통해 모듈 경로를 별칭으로 사용
-- 자동 생성 : package.json 파일에 script 자동 추가, TypeScript, Eslint, Tailwind CSS, src 디렉토리, App Router (선택) …
+- 자동 생성 : `package.json` 파일에 `script` 자동 추가, TypeScript, Eslint, Tailwind CSS, src 디렉토리, App Router (선택) …
 - 실습 : `pnpm create next-app@latest` / `npx create-next-app@latest`
 - 디렉토리 : `src/`
 
 # 2. 구조
 ## 2-1. 폴더 및 파일 규칙
-- 최상위 폴더 (Top-level folders) : 애플리케이션 코드와 정적 자산을 구성
+- `최상위 폴더 (Top-level folders)` : 애플리케이션 코드와 정적 자산을 구성
 - 사용 : 애플리케이션 구성, 종속성 관리, 프록시 실행, 모니터링 도구 통합, 환경 변수 정의 (js, ts, env, json)
 - app, package, public, …
-- 라우팅 파일 : 경로 노출할 페이지 추가, 헤더, 내비게이션, 푸터와 같은 레이아웃, 스켈레톤(로딩, 오류)
+- `라우팅 파일` : 경로 노출할 페이지 추가, 헤더, 내비게이션, 푸터와 같은 레이아웃, 스켈레톤(로딩, 오류)
 - layout, page, loading, not-found, …
-- 중첩 라우팅
+- `중첩 라우팅`
   - URL의 세그먼트 정의
   - 디렉토리 중첩 시 세그먼트 중첩
   - 모든 수준의 레이아웃은 하위 세그먼트 감쌈
   - 페이지나 경로 파일이 존재하면 해당 경로는 공개됨
-- 동적 라우팅 : 대괄호 사용하여 세그먼트를 매개변수화
-  - [segment] : 단일 매개변수
-  - [...segment] : 모든 값 포괄
-  - [[...segment]]: 선택적 포괄 매개변수
- - param 속성을 통해 값에 접근함
+- `동적 라우팅` : 대괄호 사용하여 세그먼트를 매개변수화
+  - `[segment]` : 단일 매개변수
+  - `[...segment]` : 모든 값 포괄
+  - `[[...segment]]`: 선택적 포괄 매개변수
+ - `param` 속성을 통해 값에 접근함
  - 1개의 특정 경로 세그먼트만 동적으로 매칭 (/posts) → X
-- Catch-all 라우팅 : 해당 경로 아래에 오는 모든 하위 경로를 하나의 배열로 전달하여 매칭
-- Optional Catch-all 라우팅 : Catch-all 라우팅과 같지만 동적 파라미터가 없는 기본 경로(/post)도 매칭
+- `Catch-all 라우팅` : 해당 경로 아래에 오는 모든 하위 경로를 하나의 배열로 전달하여 매칭
+- `Optional Catch-all 라우팅` : Catch-all 라우팅과 같지만 동적 파라미터가 없는 기본 경로(/post)도 매칭
 
 ## 09월 02일 (1주차)
 ## 1. Next.js
@@ -75,7 +75,7 @@
 - 특징
   - 디렉토리 엔트리에 매핑 정보 추가
   - 원본과 하드 링크는 동일한 파일 <br>
-  → `inode` 참조, 하나만 삭제하면 디렉토리 엔트리에서 이름만 삭제
+  → inode 참조, 하나만 삭제하면 디렉토리 엔트리에서 이름만 삭제
   - `link count`가 0이 되지 않는 한 데이터 존재
  
 ## 6. 심볼릭 링크 (Symbolic Link)
