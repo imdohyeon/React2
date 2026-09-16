@@ -10,7 +10,7 @@
 → `pnpm add -D @types/react @types/react-dom`
 - 서버 시작 : `pnpm dev`
 - `paths` 옵션을 통해 모듈 경로를 별칭으로 사용
-- 자동 생성 : `package.json` 파일에 `script` 자동 추가, TypeScript, Eslint, Tailwind CSS, src 디렉토리, App Router (선택) …
+- 자동 생성 : `package.json` 파일에 `script` 자동 추가, TypeScript, Eslint, Tailwind CSS, src 디렉토리, App Router (선택)
 - 실습 : `pnpm create next-app@latest` / `npx create-next-app@latest`
 - 디렉토리 : `src/`
 
