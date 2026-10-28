@@ -1,4 +1,17 @@
 # 202230120 왕도현
+## 10월 28일 (9주차)
+## 1. JS bundle 크기 줄이기
+- 번들의 크기를 줄이려면 UI의 큰 부분을 특정 대화형 component에 `"use client"`를 추가
+- `<layout>` component는 로고와 탐색 링크와 같은 정적 요소가 대부분
+- `<Search />`는 대화형이기 때문에 component가 되어야 하지만, 나머지 layout은 `server component`로 유지
+- 나머지 layout은 server component로 유지해야 함
+- `<Search />`는 사용자와의 상호작용이 이루어질 가능성이 있기 때문에 `Client Component`로 사용
+- `<Logo />`는 상대적으로 중요하지 않고 이미지 등 용량이 크기 때문에 `Server Component`로 사용
+
+## 2. server에서 client component로 데이터 전달
+- props를 사용하여 데이터를 전달
+
+
 ## 10월 14일 (7주차)
 ## 1. 낙관적 업데이트 (Optimistic Update)
 - 서버 응답을 기다리지 않고 클라이언트의 UI를 즉시 변경
